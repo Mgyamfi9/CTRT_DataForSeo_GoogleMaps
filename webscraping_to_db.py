@@ -44,8 +44,8 @@ engine = create_engine(connection_string, echo=False)  # Set echo=True for debug
 
 
 # Define the target schema and table name in the database
-new_schema = 'silver'
-new_table_name = 'Highschools_Accra'
+new_schema = 'bronze'
+new_table_name = 'Hospitals_Accra'
 
 # Write DataFrame to the new table in the specified schema in the database
 df.to_sql(new_table_name, engine, schema=new_schema, if_exists='replace', index=False)
