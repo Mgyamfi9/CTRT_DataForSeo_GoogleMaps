@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Path to your JSON file
-json_file = 'DataForSEO_Output\extracted_GoogleMapsDataset_schools_raw.json'
+json_file = 'CTRT_DataForSeo_GoogleMaps\DataForSEO_Output\mg_extracted_GoogleMapsDataset_hospital_raw.json'
 
 
 # Read the JSON data from the file
