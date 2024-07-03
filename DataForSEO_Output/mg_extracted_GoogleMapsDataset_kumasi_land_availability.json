@@ -1,0 +1,74 @@
+{
+  "version": "0.1.20240626",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0356 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07031540-8001-0066-0000-3bda655e5af5",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0179 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "news",
+        "task_get",
+        "advanced",
+        "07031540-8001-0066-0000-3bda655e5af5"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "task_get",
+        "se": "google",
+        "se_type": "news",
+        "location_name": "Ghana",
+        "language_name": "English",
+        "search_places": true,
+        "max_crawl_pages": 100,
+        "keyword": "Land Availability Kumasi Municipalites Towns Districts For Sale Real Estate",
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Land Availability Kumasi Municipalites Towns Districts For Sale Real Estate",
+          "type": "news",
+          "se_domain": "google.com.gh",
+          "location_code": 2288,
+          "language_code": "en",
+          "check_url": "https://www.google.com.gh/search?q=Land%20Availability%20Kumasi%20Municipalites%20Towns%20Districts%20For%20Sale%20Real%20Estate&num=100&hl=en&gl=GH&gws_rd=cr&tbm=nws&uule=w+CAIQIFISCcfW2qjNWtcPETbSk9Aw8tdU&ie=UTF-8&oe=UTF-8",
+          "datetime": "2024-07-03 12:40:34 +00:00",
+          "spell": null,
+          "item_types": [
+            "news_search"
+          ],
+          "se_results_count": 1,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "news_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "xpath": "/html[1]/body[1]/div[4]/div[1]/div[11]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "marcopolis.net",
+              "title": "Assessing Real Estate Opportunities Investment in Ghana",
+              "url": "https://marcopolis.net/assessing-real-estate-opportunities-investment-in-ghana.htm",
+              "image_url": "https://api.dataforseo.com/cdn/i/07031540-8001-0066-0000-3bda655e5af5:0",
+              "snippet": "The real estate market in Ghana is growing rapidly, offering lucrative \ninvestment opportunities for local and foreign investors.",
+              "time_published": "28 Aug 2023",
+              "timestamp": "2023-08-28 00:00:00 +00:00",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

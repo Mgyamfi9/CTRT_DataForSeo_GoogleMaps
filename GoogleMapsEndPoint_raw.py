@@ -6,7 +6,7 @@ import time
 import os
 
 # Define your task
-keyword = "Crime District Accra"   
+keyword = "Land Availability Kumasi Municipalites Towns Districts For Sale Real Estate"   
 
 ## Api Rest Connector for DataForSEO 
 class RestClient:
@@ -91,7 +91,7 @@ def wait_for_task_completion(client, task_id):
 # Define the absolute path where you want to save the file
 save_directory = os.path.abspath(os.path.join('..', 'Data/CTRT_DataForSeo_GoogleMaps/DataForSEO_Output'))
 os.makedirs(save_directory, exist_ok=True)
-file_path = os.path.join(save_directory, 'mg_extracted_GoogleMapsDataset_accra_district_crime_news.json')
+file_path = os.path.join(save_directory, 'mg_extracted_GoogleMapsDataset_kumasi_land_availability.json')
 
 # Submit review task and process results
 task_ids = submit_GoogleMaps_post_task(RestClient, keyword)
