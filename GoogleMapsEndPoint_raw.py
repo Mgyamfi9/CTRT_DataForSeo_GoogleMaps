@@ -6,7 +6,7 @@ import time
 import os
 
 # Define your task
-keyword = "Land Availability Kumasi Municipalites Towns Districts For Sale Real Estate"   
+keyword = "Ashanti Region High schools"   
 
 ## Api Rest Connector for DataForSEO 
 class RestClient:
@@ -52,7 +52,7 @@ def submit_GoogleMaps_post_task(client,keyword):
         "keyword": keyword
  
     }]
-    response = client.post("/v3/serp/google/news/task_post", post_data)
+    response = client.post("/v3/serp/google/maps/task_post", post_data)
     print("Task submission response:", json.dumps(response, indent=2))  # Log the full response for debugging
     if response["status_code"] == 20000:
         task_ids = [task['id'] for task in response['tasks']]
@@ -66,7 +66,7 @@ def wait_for_task_completion(client, task_id):
     max_retries = 10  # Increase the number of retries
     wait_time = 30  # Increase the wait time to 30 seconds
     for attempt in range(max_retries):
-        response = client.get(f"/v3/serp/google/news/task_get/advanced/{task_id}")
+        response = client.get(f"/v3/serp/google/maps/task_get/advanced/{task_id}")
         print(f"Checking task status for {task_id}: Attempt {attempt + 1}")
         if response["status_code"] == 20000:
             task_status = response['tasks'][0]['status_code']
@@ -91,7 +91,7 @@ def wait_for_task_completion(client, task_id):
 # Define the absolute path where you want to save the file
 save_directory = os.path.abspath(os.path.join('..', 'Data/CTRT_DataForSeo_GoogleMaps/DataForSEO_Output'))
 os.makedirs(save_directory, exist_ok=True)
-file_path = os.path.join(save_directory, 'mg_extracted_GoogleMapsDataset_kumasi_land_availability.json')
+file_path = os.path.join(save_directory, 'mg_extracted_GoogleMapsDataset_ashanti_schools.json')
 
 # Submit review task and process results
 task_ids = submit_GoogleMaps_post_task(RestClient, keyword)

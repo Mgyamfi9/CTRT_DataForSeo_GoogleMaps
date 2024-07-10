@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Path to your JSON file
-json_file = 'CTRT_DataForSeo_GoogleMaps\DataForSEO_Output\mg_extracted_GoogleMapsDataset_kumasi_land_availability.json'
+json_file = 'CTRT_DataForSeo_GoogleMaps\DataForSEO_Output\mg_extracted_GoogleMapsDataset_ashanti_schools.json'
 
 
 # Read the JSON data from the file
@@ -45,7 +45,7 @@ engine = create_engine(connection_string, echo=False)  # Set echo=True for debug
 
 # Define the target schema and table name in the database
 new_schema = 'bronze'
-new_table_name = 'MG_Kumasi_Land_Availability_News'
+new_table_name = 'MG_Schools_Ashanti'
 
 # Write DataFrame to the new table in the specified schema in the database
 df.to_sql(new_table_name, engine, schema=new_schema, if_exists='replace', index=False)
