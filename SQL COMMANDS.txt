@@ -1,0 +1,69 @@
+--Selecting columns and performing arithmetic in it and creating a new column out of it
+
+--SELECT Description, Town, [Price GHC], ([Price GHC] * 0.1) - [Price GHC] AS Discount
+--FROM bronze.Property_Details
+
+--Using the WHERE CLAUSE
+
+--SELECT Description, Town, [Price GHC]
+--FROM bronze.Property_Details
+--WHERE [Price GHC] > 1000 AND Town = 'oyarifa'
+
+--Using the IN, NOT IN, BETWEEN,LIKE
+--SELECT Description,Town,[Price GHC]
+--FROM bronze.Property_Details
+--WHERE Town = 'ablekuma' OR Town = 'oyarifa'
+--WHERE Town IN ('ablekuma','oyarifa')
+--WHERE Town NOT IN ('ablekuma','oyarifa')
+--WHERE [Price GHC] BETWEEN 1000 AND 3000
+--WHERE Town LIKE 'a%' --town name starts with a
+--WHERE Town LIKE '%a%' --town name has a in it
+--WHERE Town LIKE '_____a' --town name has a appearing at the 6th position
+--WHERE Town LIKE 'm____a' --town name has m at the beginning and a appearing at the 6th position
+--WHERE Town LIKE '%madina%' OR Town LIKE '%adenta%' --town contains madina or adenta
+
+--Using the REGEXP OPERATOR doesn't work with SQLServer use LIKE
+--SELECT *
+--FROM bronze.Property_Details
+--WHERE Town REGEXP '^a' --^beginning end$ |multiple words
+--WHERE Town REGEXP '[gm]a' --contains ga or ma
+--WHERE Town REGEXP 'a[db]' --contains ad or ab
+
+--Using the IS NULL OPERATOR
+--SELECT *
+--FROM bronze.Property_Details
+--WHERE Town IS NULL
+--WHERE Town IS NOT NULL
+
+--Using the ORDER BY CLAUSE for sorting
+--SELECT *
+--FROM bronze.Property_Details
+--ORDER BY Town DESC
+--ORDER BY Town, [Price GHC] DESC --descending
+
+--Using the LIMIT(doesn't work in ssms use TOP) Clause to limit the number of records returned...Use TOP instead
+--SELECT TOP 10 *
+--FROM bronze.Property_Details
+
+--INNER JOINS tip:join on the common column
+--SELECT Town,pc.Region,[Price GHC]
+--FROM bronze.Property_Details pd
+--JOIN bronze.Postal_Codes pc
+--	ON pd.Region=pc.Region
+
+--Joining Across Databases
+--USE sqldb1
+--SELECT *
+--FROM sqldb2bronze.Property_Details pd
+--JOIN bronze.Postal_Codes pc
+--	ON pd.Region=pc.Region
+
+--Joining Self
+--USE sql_db
+--SELECT
+	e.employee_id,
+	e.first_name,
+	m.first_name AS manager
+--FROM employees e
+--JOIN employees m
+-- ON e.[column name]=m-employee_id
